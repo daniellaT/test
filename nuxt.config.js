@@ -34,24 +34,67 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  devModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/vuetify'
-  ],
+  devModules: ['@nuxtjs/vuetify'],
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/auth',
+    '@nuxtjs/toast',
     '@nuxtjs/pwa'
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseURL: 'http://127.0.0.1:8000/api/'
+  },
+
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: 'user/login/',
+            method: 'post',
+            propertyName: 'token'
+          },
+
+          user: {
+            url: 'user/me',
+            method: 'get',
+            propertyName: false
+          },
+
+          logout: {
+            url: 'user/logout/',
+            method: 'post'
+          }
+        },
+        tokenType: 'token',
+        tokenRequired: true,
+        tokenName: 'Authorization'
+      }
+    },
+    redirect: {
+      login: '/login',
+      logout: '/login',
+      callback: '/login',
+      home: '/'
+    }
+  },
+
+  toast: {
+    position: 'top-center',
+    duration: 1500
+  },
+
+  router: {
+    middleware: ['auth']
+  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
