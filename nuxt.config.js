@@ -50,7 +50,7 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: 'https://neweratutorapi.herokuapp.com/api/'
+    baseURL: 'http://127.0.0.1:8000/api/'
   },
 
   auth: {
@@ -60,7 +60,7 @@ export default {
           login: {
             url: 'user/login/',
             method: 'post',
-            propertyName: 'token'
+            propertyName: 'access'
           },
 
           user: {
@@ -74,7 +74,7 @@ export default {
             method: 'post'
           }
         },
-        tokenType: 'token',
+        tokenType: 'Bearer',
         tokenRequired: true,
         tokenName: 'Authorization'
       }
