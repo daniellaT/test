@@ -42,8 +42,7 @@ export default {
         return {
             valid : true,
             form : {
-                code_number:null,
-                code: 3
+                code_number:null
             }
         }
     },
@@ -56,7 +55,7 @@ export default {
          text: item => item.name + ' ' + item.last_name,
 
          validate() {
-             this.validateCoupon({payload:this.form}).then(() => {
+             this.validateCoupon({code_number:this.form}).then(() => {
                  this.form.code_number = null
              }).catch((error) => {
             this.$toast.error('coupon invalide ou déjà validé')

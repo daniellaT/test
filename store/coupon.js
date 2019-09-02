@@ -5,8 +5,8 @@ export const actions = {
         })
     },
 
-    async storeCoupon({ commit }, { payload }) {
-        await this.$axios.post('/coupon/coupons/', payload).then((res) => {
+    async storeCoupon({ commit }, { code_number }) {
+        await this.$axios.post('/coupon/coupons/', code_number).then((res) => {
             commit('APPEND_COUPONS', res.data)
             this.$toast.success('coupon validé')
         })
@@ -18,8 +18,8 @@ export const mutations = {
         state.coupons = coupons
     },
 
-    APPEND_COUPONS(state, payload) {
-        state.coupons.push(payload)
+    APPEND_COUPONS(state, code_number) {
+        state.coupons.push(code_number)
     }
 }
 
