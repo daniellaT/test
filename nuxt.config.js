@@ -60,7 +60,7 @@ export default {
           login: {
             url: 'user/login/',
             method: 'post',
-            propertyName: 'access'
+            propertyName: 'token'
           },
 
           user: {
@@ -74,7 +74,7 @@ export default {
             method: 'post'
           }
         },
-        tokenType: 'Bearer',
+        tokenType: 'JWT',
         tokenRequired: true,
         tokenName: 'Authorization'
       }
