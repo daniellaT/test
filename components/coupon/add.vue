@@ -42,8 +42,7 @@ export default {
         return {
             valid : true,
             form : {
-                code_number:null,
-                code: 3
+                code_number:null
             }
         }
     },
