@@ -73,9 +73,12 @@
             </v-btn>
           </template>
           <v-list>
+            <v-list-item>
+              <v-list-item-title><v-icon>mdi-settings-transfer-outline</v-icon> Settings</v-list-item-title>
+            </v-list-item>
             <a @click="logout">
               <v-list-item>
-              <v-list-item-title><v-icon>mdi-lock</v-icon> Logout</v-list-item-title>
+              <v-list-item-title><v-icon>mdi-power</v-icon> Logout</v-list-item-title>
             </v-list-item>
             </a>
             
