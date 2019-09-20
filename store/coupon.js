@@ -8,7 +8,7 @@ export const actions = {
     async storeCoupon({ commit }, { code_number }) {
         await this.$axios.post('/coupon/coupons/', code_number).then((res) => {
             commit('APPEND_COUPONS', res.data)
-            this.$toast.success('coupon validé')
+            this.$toast.success('COUPON VALIDÉ')
         })
     }
 }
