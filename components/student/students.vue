@@ -1,5 +1,6 @@
 <template>
-  <v-card column>
+  <v-container>
+    <v-card column>
     <v-card-title>
       <strong>Mes élèves</strong> 
       <v-spacer></v-spacer>
@@ -29,6 +30,8 @@
     </template>
     </v-data-table>
   </v-card>
+  </v-container>
+  
 </template>
 
 <script>

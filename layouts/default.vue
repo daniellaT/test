@@ -110,7 +110,7 @@
         { icon: 'mdi-home', text: 'Accueil', link: '/' },
         { icon: 'mdi-school', text: 'Mes élèves', link: '/students/' },
         { icon: 'mdi-barcode', text: 'Valider les coupons', link: '/coupons/validate-coupon/' },
-        { icon: 'mdi-account-convert', text: 'Mes offres de cours'},
+        { icon: 'mdi-account-convert', text: 'Mes offres de cours',link: '/offers/'},
       ],
       items2: [
         { icon: 'mdi-contact-mail', text: 'Contacter newera' },

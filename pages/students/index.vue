@@ -1,9 +1,9 @@
 <template>
-        <v-layout>
-            <v-flex xs12>
-                <tutoring/>
-            </v-flex>
-        </v-layout>
+    <v-layout>
+        <v-flex xs12>
+            <tutoring/>
+        </v-flex>
+    </v-layout>
 </template>
 
 <script>
