@@ -3,7 +3,6 @@
         <v-flex xs12 sm6 md6>
             <v-card class="elevation-12">
                 <v-toolbar color="primary">
-                <v-toolbar-title>Login form </v-toolbar-title>
                 <v-spacer></v-spacer>
                 </v-toolbar>
                 <v-card-text>
@@ -11,18 +10,18 @@
                         <v-text-field 
                             prepend-icon="mdi-account" 
                             v-model="form.email" 
-                            label="Email address" 
+                            label="adresse email" 
                             type="text"
                         ></v-text-field>
                         <v-text-field 
                             id="password" 
                             prepend-icon="mdi-lock" 
                             v-model="form.password" 
-                            label="Password" 
+                            label="mot de passe" 
                             type="password"
                         ></v-text-field>
                         <v-btn class="ma-2" rounded  outlined color="success" type = "submit">
-                            Login
+                            se connecter
                         </v-btn>
                     </v-form>
                 </v-card-text>

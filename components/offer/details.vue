@@ -28,15 +28,15 @@
               <v-divider></v-divider>
               <p v-if="offer.course">Adresse:  <span class="ml-10">{{offer.student.area}}</span></p>
               <v-divider></v-divider>
-              <p v-if="offer.course">Durée :  <span class="ml-10">{{offer.course_time}}h</span></p>
+              <p >Durée :  <span class="ml-10">{{offer.course_time}}h</span></p>
               <v-divider></v-divider>
-              <p v-if="offer.course">Fréquence :  <span class="ml-10">{{offer.frequency}}</span></p>
+              <p >Fréquence :  <span class="ml-10">{{offer.frequency}}</span></p>
               <v-divider></v-divider>
-              <p v-if="offer.course">Début des cours:  <span class="ml-10">{{offer.starting_date}}</span></p>
+              <p >Début des cours:  <span class="ml-10">{{offer.starting_date}}</span></p>
               <v-divider></v-divider>
-              <p v-if="offer.course">Salaire horaire net:  <span class="ml-10">{{offer.hourly_pay}}/h</span></p>
+              <p >Salaire horaire net:  <span class="ml-10">{{offer.hourly_pay}}/h</span></p>
               <v-divider></v-divider>
-              <p v-if="offer.course">Disponibilités de l'élève:  <span class="ml-10">{{offer.availability}}</span></p>
+              <p>Disponibilités de l'élève:  <span class="ml-10">{{offer.availability}}</span></p>
             </v-card-text>
           </v-card>
         </v-col>
