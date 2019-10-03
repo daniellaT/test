@@ -75,12 +75,12 @@
           <v-list>
             <nuxt-link to = "/settings/change-password/">
               <v-list-item>
-                <v-list-item-title><v-icon>mdi-settings-transfer-outline</v-icon> Settings</v-list-item-title>
+                <v-list-item-title><v-icon>mdi-settings-transfer-outline</v-icon> Mon compte</v-list-item-title>
               </v-list-item>
             </nuxt-link>
             <a @click="logout">
               <v-list-item>
-              <v-list-item-title><v-icon>mdi-power</v-icon> Logout</v-list-item-title>
+              <v-list-item-title><v-icon>mdi-power</v-icon> se déconnecter</v-list-item-title>
             </v-list-item>
             </a>
             
@@ -109,13 +109,13 @@
       items: [
         { icon: 'mdi-home', text: 'Accueil', link: '/' },
         { icon: 'mdi-school', text: 'Mes élèves', link: '/students/' },
-        { icon: 'mdi-barcode', text: 'Valider les coupons', link: '/coupons/validate-coupon/' },
-        { icon: 'mdi-account-convert', text: 'Mes offres de cours',link: '/offers/'},
+        { icon: 'mdi-barcode', text: 'Rémunérations', link: '/coupons/validate-coupon/' },
+        { icon: 'mdi-account-convert', text: 'Offres de cours',link: '/offers/'},
       ],
       items2: [
-        { icon: 'mdi-contact-mail', text: 'Contacter newera' },
-        { icon: 'mdi-book', text: 'Documents pédagogiques' },
-        { icon: 'mdi-bank', text: 'Récapitulatif de paie' }
+        // { icon: 'mdi-contact-mail', text: 'Contacter newera' },
+        // { icon: 'mdi-book', text: 'Documents pédagogiques' },
+        // { icon: 'mdi-bank', text: 'Récapitulatif de paie' }
       ],
     }),
      methods : {

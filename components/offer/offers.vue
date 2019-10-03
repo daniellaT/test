@@ -23,7 +23,7 @@
                 class="mr-2"
                 color = 'green'
                 medium 
-                @click.prevent = ''       
+                @click.prevent = 'show(item.id)'       
             >
                 mdi-information
             </v-icon>
@@ -66,7 +66,11 @@ import {mapGetters, mapActions} from 'vuex'
     methods : {
         ...mapActions({
             getoffers : 'offer/getOffers'
-        })
+        }),
+
+        show(id) {
+            this.$router.push('/offers/'+ id)
+         }
     },
 
     mounted(){
