@@ -30,7 +30,7 @@
               <v-divider></v-divider>
               <p >Durée :  <span class="ml-10">{{offer.course_time}}h</span></p>
               <v-divider></v-divider>
-              <p >Fréquence :  <span class="ml-10">{{offer.frequency}}</span></p>
+              <p >Fréquence par semaine:  <span class="ml-10">{{offer.frequency}}</span></p>
               <v-divider></v-divider>
               <p >Début des cours:  <span class="ml-10">{{offer.starting_date}}</span></p>
               <v-divider></v-divider>
