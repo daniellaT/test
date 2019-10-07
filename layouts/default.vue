@@ -109,7 +109,7 @@
       items: [
         { icon: 'mdi-home', text: 'Accueil', link: '/' },
         { icon: 'mdi-school', text: 'Mes élèves', link: '/students/' },
-        { icon: 'mdi-barcode', text: 'Rémunération', link: '/coupons/validate-coupon/' },
+        { icon: 'mdi-barcode', text: 'Remunération', link: '/coupons/validate-coupon/' },
         { icon: 'mdi-account-convert', text: 'Offres de cours',link: '/offers/'},
       ],
       items2: [
