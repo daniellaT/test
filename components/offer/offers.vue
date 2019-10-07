@@ -4,29 +4,14 @@
             <v-card-title>
             <strong>Mes offres de cours</strong> 
             <v-spacer></v-spacer>
-            <v-text-field
-                v-model="search"
-                append-icon="mdi-magnify"
-                label="Search"
-                single-line
-                hide-details
-            ></v-text-field>
             </v-card-title>
             <v-data-table
             :headers="headers"
             :items="offers"
-            :search="search"
             >
             <template v-slot:item.action="{ item }">
                     
-            <v-icon        
-                class="mr-2"
-                color = 'green'
-                medium 
-                @click.prevent = 'show(item.id)'       
-            >
-                mdi-information
-            </v-icon>
+            <a href="#" @click.prevent="show(item.id)">voir</a>
             </template>
             </v-data-table>
         </v-card>
@@ -39,7 +24,6 @@ import {mapGetters, mapActions} from 'vuex'
   export default {
     data () {
       return {
-        search: '',
         headers: [
           {
             text: "Nom de l'élève",

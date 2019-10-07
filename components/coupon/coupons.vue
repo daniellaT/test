@@ -3,18 +3,10 @@
     <v-card-title>
      Mes Coupons
       <v-spacer></v-spacer>
-      <v-text-field
-        v-model="search"
-        append-icon="mdi-magnify"
-        label="Search"
-        single-line
-        hide-details
-      ></v-text-field>
     </v-card-title>
     <v-data-table
       :headers="headers"
       :items="coupons"
-      :search="search"
     >
     </v-data-table>
   </v-card>
@@ -25,7 +17,6 @@ import {mapGetters, mapActions} from 'vuex'
   export default {
     data () {
       return {
-        search: '',
         headers: [
           {
             text: 'Nom élève',

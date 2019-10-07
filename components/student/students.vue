@@ -4,18 +4,10 @@
     <v-card-title>
       <strong>Mes élèves</strong> 
       <v-spacer></v-spacer>
-      <v-text-field
-        v-model="search"
-        append-icon="mdi-magnify"
-        label="Search"
-        single-line
-        hide-details
-      ></v-text-field>
     </v-card-title>
     <v-data-table
       :headers="headers"
       :items="tutorings"
-      :search="search"
     >
     <template v-slot:item.action="{ item }">
             
@@ -39,7 +31,6 @@ import {mapGetters, mapActions} from 'vuex'
   export default {
     data () {
       return {
-        search: '',
         headers: [
           {
             text: "Nom de l'élève",

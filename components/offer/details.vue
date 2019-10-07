@@ -18,25 +18,26 @@
       <v-row>
         <v-col>
           <v-card
-            color="#385F73"
-            dark
+            
           >
-            <v-card-text class="white--text">
-              <p v-if="offer.course">Matière: <span class="ml-10">{{offer.course.name}}</span></p>
+            <v-card-text class="black--text">
+              <p v-if="offer.course"><strong>Matière:</strong> <span class="ml-10">{{offer.course.name}}</span></p>
               <v-divider></v-divider>
-              <p v-if="offer.student">Classe:  <span class="ml-10">{{offer.student.level.name}}</span></p>
+              <p v-if="offer.student"><strong>Classe:</strong>   <span class="ml-10">{{offer.student.level.name}}</span></p>
               <v-divider></v-divider>
-              <p v-if="offer.course">Adresse:  <span class="ml-10">{{offer.student.area}}</span></p>
+              <p v-if="offer.course"><strong>Quartier:</strong>  <span class="ml-10">{{offer.student.area}}</span></p>
               <v-divider></v-divider>
-              <p >Durée :  <span class="ml-10">{{offer.course_time}}h</span></p>
+              <p v-if="offer.course"><strong>Ville:</strong>  <span class="ml-10">{{offer.student.city}}</span></p>
               <v-divider></v-divider>
-              <p >Fréquence par semaine:  <span class="ml-10">{{offer.frequency}}</span></p>
+              <p ><strong>Durée:</strong>  <span class="ml-10">{{offer.course_time}}h</span></p>
               <v-divider></v-divider>
-              <p >Début des cours:  <span class="ml-10">{{offer.starting_date}}</span></p>
+              <p ><strong>Fréquence par semaine:</strong>  <span class="ml-10">{{offer.frequency}}</span></p>
               <v-divider></v-divider>
-              <p >Salaire horaire net:  <span class="ml-10">{{offer.hourly_pay}}/h</span></p>
+              <p ><strong>Début des cours:</strong>  <span class="ml-10">{{offer.starting_date}}</span></p>
               <v-divider></v-divider>
-              <p>Disponibilités de l'élève:  <span class="ml-10">{{offer.availability}}</span></p>
+              <p ><strong>Salaire horaire:</strong>  <span class="ml-10">{{offer.hourly_pay}}/h</span></p>
+              <v-divider></v-divider>
+              <p><strong>Disponibilités de l'élève:</strong>  <span class="ml-10">{{offer.availability}}</span></p>
             </v-card-text>
           </v-card>
         </v-col>
@@ -55,17 +56,17 @@ export default {
   
     data (){
         return {
-        items: [
-        {
-          text: 'Offres',
-          disabled: false,
-          to: '/offers',
-        },
-        {
-          text: 'Détails',
-          disabled: true
-        },
-        ],
+          items: [
+            {
+              text: 'liste des offres',
+              disabled: false,
+              href: '/offers',
+            },
+            {
+              text: 'Détails',
+              disabled: true
+            },
+          ],
 
         offer : {}
         }

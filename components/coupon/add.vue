@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-card-title>
-          <span class="headline"> <strong>Valider coupons</strong></span>
+          <span class="headline"> <strong>saisir mes coupons</strong></span>
         </v-card-title>
         <v-card-text>
           <v-container grid-list-md>
@@ -12,7 +12,7 @@
                 lazy-validation
                     > <v-text-field
                         v-model="form.code_number"
-                        label="Entre le code du coupon:"
+                        label="code du coupon:"
                     ></v-text-field>
 
                     <v-btn

@@ -74,7 +74,7 @@ export default {
             method: 'post'
           }
         },
-        tokenType: 'JWT',
+        tokenType: 'jwt',
         tokenRequired: true,
         tokenName: 'Authorization'
       }
