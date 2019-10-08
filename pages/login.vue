@@ -54,16 +54,15 @@
   methods: {    
     async submit() {
       try {
-        this.$toast.success('Logging in...')
-        await this.$auth
+        this.$toast.show('Logging in...')
+        return this.$auth
         .loginWith('local',{
           data: this.form
         })
-      }
-      catch (error) {
+      } catch (error) {
         this.$toast.error('Error while authenticating')
       }
-    },
+    }
   }
   }
 </script>
