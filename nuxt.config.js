@@ -71,9 +71,9 @@ export default {
           },
 
           user: {
-            // url: 'user/me',
-            // method: 'get',
-            // propertyName: false
+            url: 'user/me',
+            method: 'get',
+            propertyName: false
           },
 
           logout: {

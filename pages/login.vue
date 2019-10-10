@@ -52,7 +52,7 @@
   },
   
   methods: {    
-    async submit() {
+     submit() {
       try {
         this.$toast.success('Logging in...')
         return this.$auth
