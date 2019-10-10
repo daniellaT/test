@@ -4,7 +4,7 @@ export const actions = {
   }, {
     payload
   }) {
-    await this.$axios.patch('/user/update-password/', payload).then((res) => {
+    return await this.$axios.patch('/user/update-password/', payload).then((res) => {
       
         commit('SET_PASSWORD', res.data)
       

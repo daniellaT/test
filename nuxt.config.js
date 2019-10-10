@@ -50,12 +50,15 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: 'https://neweratutorapi.herokuapp.com/api/'
+    baseURL: 'http://tutor.api.newera-tutoring.cm/api/'
   },
 
   auth: {
     redirect: {
-      callback: '/callback'
+      callback: '/callback',
+      login: '/login',
+      logout: '/login',
+      home: '/'
     },
     strategies: {
       local: {
@@ -81,12 +84,6 @@ export default {
         tokenRequired: true,
         tokenName: 'Authorization'
       }
-    },
-    redirect: {
-      login: '/login',
-      logout: '/login',
-      callback: '/login',
-      home: '/'
     }
   },
 

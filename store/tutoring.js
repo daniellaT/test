@@ -1,12 +1,12 @@
 export const actions = {
     async getTutorings({ commit }) {
-        await this.$axios.get('/tutoring/tutorings/').then((res) => {
+        return await this.$axios.get('/tutoring/tutorings/').then((res) => {
             commit('SET_TUTORINGS', res.data)
         })
     },
 
     async storeTutoring({ commit }, { payload }) {
-        await this.$axios.post('/tutoring/tutorings/', payload).then((res) => {
+        return await this.$axios.post('/tutoring/tutorings/', payload).then((res) => {
             commit('APPEND_TUTORINGS', res.data)
             this.$toast.success('nouvel accompagnement ajouté')
 
@@ -14,7 +14,7 @@ export const actions = {
     },
 
     async getTutoring({ commit }, { id }) {
-        await this.$axios.get('/tutoring/tutorings/' + id).then((res) => {
+        return await this.$axios.get('/tutoring/tutorings/' + id).then((res) => {
             commit('SET_TUTORING', res.data)
         })
     },

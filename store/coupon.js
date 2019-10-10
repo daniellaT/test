@@ -1,12 +1,12 @@
 export const actions = {
     async getCoupons({ commit }) {
-        await this.$axios.get('/coupon/coupons/').then((res) => {
+        return await this.$axios.get('/coupon/coupons/').then((res) => {
             commit('SET_COUPONS', res.data)
         })
     },
 
     async storeCoupon({ commit }, { code_number }) {
-        await this.$axios.post('/coupon/coupons/', code_number).then((res) => {
+        return await this.$axios.post('/coupon/coupons/', code_number).then((res) => {
             commit('APPEND_COUPONS', res.data)
             this.$toast.success('COUPON VALIDÉ')
         })
