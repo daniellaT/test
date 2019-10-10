@@ -71,7 +71,7 @@ export default {
           },
 
           user: {
-            url: 'user/me',
+            url: 'user/me/',
             method: 'get',
             propertyName: false
           },
