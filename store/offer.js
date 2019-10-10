@@ -6,7 +6,7 @@ export const actions = {
     },
 
      async getOffer({ commit }, { id }) {
-        return await this.$axios.get('/offer/offers/' + id).then((res) => {
+        return await this.$axios.get('/offer/offers/' + id + '/').then((res) => {
             commit('SET_OFFER', res.data)
         })
     },

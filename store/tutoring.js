@@ -14,7 +14,7 @@ export const actions = {
     },
 
     async getTutoring({ commit }, { id }) {
-        return await this.$axios.get('/tutoring/tutorings/' + id).then((res) => {
+        return await this.$axios.get('/tutoring/tutorings/' + id + '/').then((res) => {
             commit('SET_TUTORING', res.data)
         })
     },
