@@ -59,11 +59,6 @@
         .loginWith('local',{
           data: this.form
         })
-        .then(() => {
-          this.$router.push({
-            path: this.$route.query.redirect || "/"
-          })
-        })
       } catch (error) {
         this.$toast.error('Error while authenticating')
       }
