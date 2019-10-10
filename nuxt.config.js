@@ -50,7 +50,8 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: 'http://tutor.api.newera-tutoring.cm/api/'
+    baseURL: 'https://neweratutorapi.herokuapp.com/api/',
+    https:true
   },
 
   auth: {
