@@ -55,9 +55,14 @@
     async submit() {
       try {
         this.$toast.success('Logging in...')
-        return await this.$auth
+        return this.$auth
         .loginWith('local',{
           data: this.form
+        })
+        .then(() => {
+          this.$router.push({
+            path: this.$route.query.redirect || "/"
+          })
         })
       } catch (error) {
         this.$toast.error('Error while authenticating')
