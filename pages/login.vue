@@ -60,7 +60,7 @@
     async submit() {
       try {
         this.$toast.success('Logging in...')
-        return this.$auth
+        await this.$auth
         .loginWith('local',{
           data: this.form
         })
