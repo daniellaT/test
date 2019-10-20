@@ -54,7 +54,7 @@
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="mr-12 align-center">
-        <span class="title">Tuteur+</span>
+        <span class="title"><img src="https://www.newera-tutoring.cm/style/img/tutor_logo.png" alt="Girl in a jacket"></span>
       </v-toolbar-title>
       <div class="flex-grow-1"></div>
       <v-row
@@ -109,7 +109,7 @@
       items: [
         { icon: 'mdi-home', text: 'Accueil', link: '/' },
         { icon: 'mdi-school', text: 'Mes élèves', link: '/students/' },
-        { icon: 'mdi-barcode', text: 'Remunération', link: '/coupons/validate-coupon/' },
+        { icon: 'mdi-barcode', text: 'Rémunération', link: '/coupons/validate-coupon/' },
         { icon: 'mdi-account-convert', text: 'Offres de cours',link: '/offers/'},
       ],
       items2: [

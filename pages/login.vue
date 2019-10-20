@@ -23,6 +23,11 @@
                         <v-btn class="ma-2" rounded  outlined color="success" type = "submit">
                             se connecter
                         </v-btn>
+                        <div class="float-right">
+                          <span class="subtitle-2">
+                            <small><nuxt-link to="/password/recover/">mot de passe oublié?</nuxt-link></small>
+                          </span>
+                        </div>
                     </v-form>
                 </v-card-text>
                 <v-card-actions>

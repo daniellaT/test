@@ -10,6 +10,27 @@ export const actions = {
       
         this.$toast.success('PASSWORD MODIFIÉ')
     })
+  },
+  async requestPasswordReset({
+    
+  }, {
+    payload
+  }) {
+    return await this.$axios.post('/password/reset-email/', payload).then((res) => {
+
+      
+      this.$toast.success('EMAIL ENVOYE')
+    })
+  },
+
+  async resetPassword({payload}) {
+
+    return await this.$axios.post('/password/reset-email/', payload).then((res) => {
+
+
+      this.$toast.success('PASSWORD MODiFiÉ')
+    })
+
   }
   
 }
