@@ -23,7 +23,7 @@ export const actions = {
     })
   },
 
-  async resetPassword({payload}) {
+  async resetPassword({},{payload}) {
 
      await this.$axios.patch('/password/update-reset-password/', payload).then((res) => {
 
