@@ -1,7 +1,7 @@
 <template>
     <v-layout>
         <v-flex xs8>
-            <div class="mt-10 text-center">
+            <div class="mt-10">
                 <reset/>
             </div>
             

@@ -25,10 +25,9 @@ export const actions = {
 
   async resetPassword({payload}) {
 
-    return await this.$axios.post('/password/reset-email/', payload).then((res) => {
+     await this.$axios.patch('/password/update-reset-password/', payload).then((res) => {
 
-
-      this.$toast.success('PASSWORD MODiFiÉ')
+      this.$toast.success('PASSWORD MODiFiÉ! VOUS POUVEZ VOUS CONNECTER AVEC LE NOUVEAU PASSWORD')
     })
 
   }

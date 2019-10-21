@@ -48,6 +48,11 @@ export default {
         onSubmit() {
             this.reset({
                 payload : this.form
+            }).then(() => {
+                this.form.email = null
+            })
+            .catch((e)=> {
+                this.$toast.error('email introuvable!')
             })
         }
     }
