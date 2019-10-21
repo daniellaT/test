@@ -50,7 +50,7 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: 'https://neweraadminapi.herokuapp.com/api/'
+    baseURL: 'https://neweratutorapi.herokuapp.com/api/'
   },
 
   auth: {
