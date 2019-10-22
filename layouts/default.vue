@@ -54,7 +54,7 @@
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="mr-12 align-center">
-        <span class="title"><img src="https://www.newera-tutoring.cm/style/img/tutor_logo.png" alt="Girl in a jacket"></span>
+        <span class="title"><nuxt-link to="/"><img src="https://www.newera-tutoring.cm/style/img/tutor_logo.png" alt="tutor logo"></nuxt-link></span>
       </v-toolbar-title>
       <div class="flex-grow-1"></div>
       <v-row
