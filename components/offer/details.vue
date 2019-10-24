@@ -41,7 +41,24 @@
             </v-card-text>
           </v-card>
         </v-col>
+        
       </v-row>
+      <v-form>
+
+            <v-checkbox
+              v-model="checkbox"
+              label="Postuler"
+            ></v-checkbox>
+
+            <v-btn
+              v-if="checkbox"
+              color="success"
+              class="mr-4"
+              @click="validate"
+            >
+              Validate
+            </v-btn>
+    </v-form>
     </v-container>
   </v-card>
 </div>
@@ -56,6 +73,7 @@ export default {
   
     data (){
         return {
+          checkbox : false,
           items: [
             {
               text: 'liste des offres',
