@@ -35,12 +35,12 @@ import {mapGetters, mapActions} from 'vuex'
           {
             text: "Nom de l'élève",
             align: 'left',
-            sortable: true,
+            sortable: false,
             value: 'student.name',
           },
-          { text: 'Prénom élève', value: 'student.last_name'},
-          { text: 'Classe', value: 'student.level.name' },
-          { text: 'Matière', value: 'course.name' },
+          { text: 'Prénom élève',sortable: false, value: 'student.last_name'},
+          { text: 'Classe',sortable: false, value: 'student.level.name' },
+          { text: 'Matière',sortable: false, value: 'course.name' },
           { text: 'Actions',sortable: false,  value: 'action'}          
         ]
       }

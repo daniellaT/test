@@ -21,23 +21,23 @@
             
           >
             <v-card-text class="black--text">
-              <p v-if="offer.course"><strong>Matière:</strong> <span class="ml-10">{{offer.course.name}}</span></p>
+              <p v-if="offerDetail.course"><strong>Matière:</strong> <span class="ml-10">{{offerDetail.course.name}}</span></p>
               <v-divider></v-divider>
-              <p v-if="offer.student"><strong>Classe:</strong>   <span class="ml-10">{{offer.student.level.name}}</span></p>
+              <p v-if="offerDetail.student"><strong>Classe:</strong>   <span class="ml-10">{{offerDetail.student.level.name}}</span></p>
               <v-divider></v-divider>
-              <p v-if="offer.course"><strong>Quartier:</strong>  <span class="ml-10">{{offer.student.area}}</span></p>
+              <p v-if="offerDetail.course"><strong>Quartier:</strong>  <span class="ml-10">{{offerDetail.student.area}}</span></p>
               <v-divider></v-divider>
-              <p v-if="offer.course"><strong>Ville:</strong>  <span class="ml-10">{{offer.student.city}}</span></p>
+              <p v-if="offerDetail.course"><strong>Ville:</strong>  <span class="ml-10">{{offerDetail.student.city}}</span></p>
               <v-divider></v-divider>
-              <p ><strong>Durée:</strong>  <span class="ml-10">{{offer.course_time}}h</span></p>
+              <p ><strong>Durée:</strong>  <span class="ml-10">{{offerDetail.course_time}}h</span></p>
               <v-divider></v-divider>
-              <p ><strong>Fréquence par semaine:</strong>  <span class="ml-10">{{offer.frequency}}</span></p>
+              <p ><strong>Fréquence par semaine:</strong>  <span class="ml-10">{{offerDetail.frequency}}</span></p>
               <v-divider></v-divider>
-              <p ><strong>Début des cours:</strong>  <span class="ml-10">{{offer.starting_date}}</span></p>
+              <p ><strong>Début des cours:</strong>  <span class="ml-10">{{offerDetail.starting_date}}</span></p>
               <v-divider></v-divider>
-              <p ><strong>Salaire horaire:</strong>  <span class="ml-10">{{offer.hourly_pay}}/h</span></p>
+              <p ><strong>Salaire horaire:</strong>  <span class="ml-10">{{offerDetail.hourly_pay}}/h</span></p>
               <v-divider></v-divider>
-              <p><strong>Disponibilités de l'élève:</strong>  <span class="ml-10">{{offer.availability}}</span></p>
+              <p><strong>Disponibilités de l'élève:</strong>  <span class="ml-10">{{offerDetail.availability}}</span></p>
             </v-card-text>
           </v-card>
         </v-col>
@@ -54,9 +54,9 @@
               v-if="checkbox"
               color="success"
               class="mr-4"
-              @click="validate"
+              @click="postulate"
             >
-              Validate
+              Postuler
             </v-btn>
     </v-form>
     </v-container>
@@ -73,6 +73,10 @@ export default {
   
     data (){
         return {
+          application : {
+            tutor : this.$store.state.auth.user.id,
+            offer : this.$route.params.id
+          },
           checkbox : false,
           items: [
             {
@@ -86,7 +90,7 @@ export default {
             },
           ],
 
-        offer : {}
+        offerDetail : {}
         }
     },
     computed : {
@@ -97,13 +101,19 @@ export default {
     methods : {
         ...mapActions({
             getoffer : 'offer/getOffer',
+
+            apply : 'offer/postulate'
         }),
 
         getOffer(){
             this.getoffer({id:this.$route.params.id}).then(()=>{
-              this.offer = this.get_offer
+              this.offerDetail = this.get_offer
             })
         },
+
+        postulate(){
+          this.apply({payload : this.application})
+        }
     },      
 
     
